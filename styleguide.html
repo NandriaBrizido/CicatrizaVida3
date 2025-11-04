@@ -1,0 +1,146 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Guia de Estilo — Cicatriza Vida</title>
+  <link rel="stylesheet" href="css/styles.min.css">
+</head>
+<body class="site">
+<header class="site-header">
+  <div class="container navbar" id="navbar">
+    <div class="navbar-brand">
+      <a href="index.html" class="flex"><img src="images/logo.png" alt="Cicatriza Vida logo"><strong>Cicatriza Vida</strong></a>
+    </div>
+    <button class="nav-toggle btn ghost" aria-label="Abrir menu" id="btnMenu">☰ Menu</button>
+    <nav class="navbar-menu" aria-label="Principal">
+      <a href="index.html">Início</a>
+      <a href="projetos.html">Projetos</a>
+      <a href="cadastro.html">Cadastro</a>
+      <a href="painel.html">Painel da ONG</a>
+      <a href="styleguide.html" aria-current="page"><strong>Guia de Estilo</strong></a>
+      <button class="btn ghost" id="toggleTheme" type="button" aria-pressed="false">🌙 Tema</button>
+    </nav>
+  </div>
+</header>
+<main class="site-main">
+  <section class="container">
+    <h1>Design System & Guia de Estilo</h1>
+    <p>Paleta, tipografia, espaçamentos, componentes e padrões de interação usados no projeto.</p>
+
+    <h2>Paleta de Cores</h2>
+    <div class="grid">
+      <div class="col-3 round p-2 shadow" style="background:var(--color-primary); color:#fff;">primary</div>
+      <div class="col-3 round p-2 shadow" style="background:var(--color-primary-600); color:#fff;">primary-600</div>
+      <div class="col-3 round p-2 shadow" style="background:var(--color-primary-400); color:#fff;">primary-400</div>
+      <div class="col-3 round p-2 shadow" style="background:var(--color-secondary);">secondary</div>
+      <div class="col-3 round p-2 shadow" style="background:var(--color-accent); color:#fff;">accent</div>
+      <div class="col-3 round p-2 shadow" style="background:var(--color-info); color:#fff;">info</div>
+      <div class="col-3 round p-2 shadow" style="background:var(--color-warning);">warning</div>
+      <div class="col-3 round p-2 shadow" style="background:var(--color-danger); color:#fff;">danger</div>
+    </div>
+
+    <h2 class="mt-3">Tipografia</h2>
+    <p style="font-size:var(--fs-2xl)">Tamanho 2XL</p>
+    <p style="font-size:var(--fs-xl)">Tamanho XL</p>
+    <p style="font-size:var(--fs-lg)">Tamanho LG</p>
+    <p style="font-size:var(--fs-md)">Tamanho MD</p>
+    <p style="font-size:var(--fs-sm)">Tamanho SM</p>
+
+    <h2 class="mt-3">Espaçamentos (escala de 8px)</h2>
+    <div class="flex">
+      <div class="round p-1 shadow">8</div>
+      <div class="round p-2 shadow">16</div>
+      <div class="round p-3 shadow">24</div>
+      <div class="round" style="padding:32px; box-shadow: var(--shadow-sm);">32</div>
+      <div class="round" style="padding:48px; box-shadow: var(--shadow-sm);">48</div>
+      <div class="round" style="padding:64px; box-shadow: var(--shadow-sm);">64</div>
+    </div>
+
+    <h2 class="mt-3">Botões</h2>
+    <div class="flex">
+      <button class="btn">Primário</button>
+      <button class="btn secondary">Secundário</button>
+      <button class="btn ghost">Ghost</button>
+      <button class="btn" disabled>Desabilitado</button>
+    </div>
+
+    <h2 class="mt-3">Badges/Tags</h2>
+    <div class="flex">
+      <span class="badge">Padrão</span>
+      <span class="badge success">Sucesso</span>
+      <span class="badge info">Info</span>
+      <span class="badge warn">Alerta</span>
+      <span class="badge danger">Erro</span>
+    </div>
+
+    <h2 class="mt-3">Cards</h2>
+    <div class="cards">
+      <article class="card">
+        <img src="images/guia-exemplo.jpg" alt="Exemplo de projeto da Cicatriza Vida">
+        <div class="card-body">
+          <h3>Projeto 1</h3>
+          <p>Breve descrição do projeto com foco nos impactos e resultados.</p>
+          <div class="flex"><span class="badge info">Captação</span><span class="badge success">Ativo</span></div>
+        </div>
+        <div class="card-footer">
+          <a href="projetos.html" class="btn">Ver detalhes</a>
+          <button class="btn ghost" onclick="openModal('Inscrição','Inscreva-se para participar como voluntário.')">Quero ajudar</button>
+        </div>
+      </article>
+    </div>
+
+    <h2 class="mt-3">Formulários</h2>
+    <form class="form" onsubmit="showToast('Formulário de exemplo enviado!'); return false;">
+      <div class="form-row">
+        <div class="form-group half">
+          <label for="nome">Nome completo</label>
+          <input id="nome" required placeholder="Maria Silva">
+          <small class="form-hint">Obrigatório</small>
+        </div>
+        <div class="form-group half">
+          <label for="email">E-mail</label>
+          <input id="email" type="email" required placeholder="email@exemplo.com">
+          <small class="form-hint">Formato: nome@domínio</small>
+        </div>
+      </div>
+      <button class="btn">Enviar</button>
+    </form>
+
+    <h2 class="mt-3">Feedback</h2>
+    <div class="alert info">Informação importante para o usuário.</div>
+    <div class="alert success">Ação executada com sucesso.</div>
+    <div class="alert warn">Atenção: verifique os dados informados.</div>
+       <div class="alert danger">Erro: não foi possível concluir a operação.</div>
+  </section>
+
+  <section class="container" style="text-align:center; margin-top:40px;">
+    <h2>Imagem de Exemplo do Layout</h2>
+    <p>Visual geral do site Cicatriza Vida com cores, tipografia e imagens balanceadas.</p>
+    <img src="images/guia-exemplo.jpg"
+         alt="Visual de oficinas, treinamentos e doações da ONG Cicatriza Vida"
+         style="max-width:900px; width:90%; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.15); margin-top:20px;">
+  </section>
+
+</main>
+<footer class="site-footer">
+  <div class="container">© 2025 CicatrizaVida | Tefé - Amazonas | Todos os direitos reservados — Nandria da Silva Brizido</div>
+</footer>
+
+<div class="toast" id="globalToast" role="status" aria-live="polite"></div>
+<div class="modal-backdrop" id="globalModal" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <h3 id="modalTitle">Aviso</h3>
+    <p id="modalBody">Conteúdo do modal.</p>
+    <div class="flex justify-between mt-2">
+      <button class="btn ghost" id="modalClose" onclick="document.getElementById('globalModal').classList.remove('open')">Fechar</button>
+      <button class="btn" id="modalOk" onclick="document.getElementById('globalModal').classList.remove('open')">OK</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

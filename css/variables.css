@@ -1,0 +1,48 @@
+
+:root {
+
+  --color-primary: #1B5E20;
+  --color-primary-600: #2E7D32;
+  --color-primary-400: #4CAF50;
+  --color-secondary: #FFC107;
+  --color-accent: #FF5722;
+  --color-info: #0288D1;
+  --color-success: #2E7D32;
+  --color-warning: #F9A825;
+  --color-danger: #E53935;
+
+  --neutral-50: #FAFAFA;
+  --neutral-100: #F5F5F5;
+  --neutral-200: #EEEEEE;
+  --neutral-300: #E0E0E0;
+  --neutral-600: #757575;
+  --neutral-700: #616161;
+  --neutral-800: #424242;
+  --neutral-900: #212121;
+
+  --font-sans: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  --fs-xs: 12px;
+  --fs-sm: 14px;
+  --fs-md: 16px;
+  --fs-lg: 20px;
+  --fs-xl: 28px;
+  --fs-2xl: 36px;
+
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 2px 6px rgba(0,0,0,.08);
+  --shadow-md: 0 6px 14px rgba(0,0,0,.12);
+
+  --container-max: 1200px;
+  --grid-gap: 16px;
+
+  --micro: 160ms;
+}

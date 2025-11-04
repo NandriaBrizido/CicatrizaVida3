@@ -1,0 +1,83 @@
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--grid-gap);
+}
+.col-12 { grid-column: span 12; }
+.col-6  { grid-column: span 6; }
+.col-4  { grid-column: span 4; }
+.col-3  { grid-column: span 3; }
+
+.site {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+header.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: white;
+  box-shadow: var(--shadow-sm);
+}
+.site-main { padding: var(--space-4) 0; }
+.site-footer {
+  background: var(--neutral-100);
+  padding: var(--space-4) 0;
+  color: var(--neutral-700);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) 0;
+}
+.navbar-brand { display: flex; align-items: center; gap: var(--space-2); }
+.navbar-brand img { height: 40px; }
+.navbar-menu { display: flex; gap: var(--space-3); align-items: center; }
+.navbar-menu a { padding: 8px 12px; border-radius: var(--radius-sm); }
+.navbar-menu a:hover { background: var(--neutral-100); }
+
+.dropdown { position: relative; }
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  min-width: 220px;
+  background: #fff;
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-2);
+  display: none;
+}
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu { display: block; }
+
+.nav-toggle { display: none; }
+@media (max-width: 768px) {
+  .navbar-menu { display: none; }
+  .nav-toggle { display: inline-flex; align-items:center; gap:8px; }
+  .navbar.open .navbar-menu {
+    display: flex; flex-direction: column; align-items: flex-start;
+    position: absolute; top: 60px; left: 0; right: 0;
+    background: #fff; padding: var(--space-2); border-top: 1px solid var(--neutral-200);
+  }
+}
+
+@media (max-width: 480px) {
+  .hide-xs { display: none !important; }
+}
+@media (max-width: 768px) {
+  .col-md-12 { grid-column: span 12; }
+  .col-md-6  { grid-column: span 6; }
+}
+@media (max-width: 1024px) {
+  .col-lg-12 { grid-column: span 12; }
+  .col-lg-6  { grid-column: span 6; }
+}
+@media (max-width: 1280px) { /* reserved */ }
+@media (min-width: 1440px) { .container { max-width: 1320px; } }

@@ -1,0 +1,26 @@
+
+:root[data-theme="dark"] {
+  --neutral-50: #0f1115;
+  --neutral-100: #12151b;
+  --neutral-200: #1a1f28;
+  --neutral-300: #232a35;
+  --neutral-600: #c2c6cf;
+  --neutral-700: #d0d4dc;
+  --neutral-800: #e0e3ea;
+  --neutral-900: #f1f3f7;
+
+  --color-primary: #81C784;
+  --color-primary-600: #66BB6A;
+  --color-primary-400: #A5D6A7;
+  --color-secondary: #FFD54F;
+  --color-accent: #FF8A65;
+  --color-info: #4FC3F7;
+  --color-success: #66BB6A;
+  --color-warning: #FFCA28;
+  --color-danger: #EF5350;
+}
+:root[data-theme="dark"] body { background: var(--neutral-50); color: var(--neutral-900); }
+:root[data-theme="dark"] header.site-header { background: var(--neutral-100); }
+:root[data-theme="dark"] .navbar-menu a:hover { background: var(--neutral-200); }
+:root[data-theme="dark"] .card { background: var(--neutral-100); border-color: var(--neutral-300); }
+:root[data-theme="dark"] .dropdown-menu { background: var(--neutral-100); border-color: var(--neutral-300); }

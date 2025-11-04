@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel da ONG — Cicatriza Vida</title>
+  <link rel="stylesheet" href="css/styles.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="site">
+
+<header class="site-header">
+  <div class="container navbar" id="navbar">
+    <div class="navbar-brand">
+      <a href="index.html" class="flex"><img src="images/logo.png" alt="Cicatriza Vida logo"><strong>Cicatriza Vida</strong></a>
+    </div>
+    <button class="nav-toggle btn ghost" aria-label="Abrir menu" id="btnMenu">☰ Menu</button>
+    <nav class="navbar-menu" aria-label="Principal">
+      <a href="index.html">Início</a>
+      <a href="projetos.html">Projetos</a>
+      <a href="cadastro.html">Doação</a>
+      <a href="inscricao.html">Inscrição</a>
+      <a href="voluntariado.html">Voluntariado</a>
+      <a href="painel.html" aria-current="page"><strong>Painel da ONG</strong></a>
+      <a href="styleguide.html">Guia de Estilo</a>
+      <button class="btn ghost" id="toggleTheme" type="button">🌙 Tema</button>
+    </nav>
+  </div>
+</header>
+
+<main class="site-main">
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">© 2025 CicatrizaVida | Tefé - Amazonas | Todos os direitos reservados — Nandria da Silva Brizido</div>
+</footer>
+
+<script src="js/dados.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="js/chat.js"></script>
+<script src="js/utils.js"></script>
+<div id="chatWidget" class="chat-widget">
+  <button id="chatToggle" class="chat-btn" aria-label="Abrir chat">💬</button>
+  <div id="chatBox" class="chat-box hidden">
+    <div class="chat-header">
+      <h4>Fale Conosco</h4>
+      <button id="chatClose" class="close-btn">✖</button>
+    </div>
+    <div id="chatMessages" class="chat-messages"></div>
+    <div class="chat-input">
+      <input type="text" id="chatInput" placeholder="Digite sua mensagem..." />
+      <button id="chatSend">Enviar</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

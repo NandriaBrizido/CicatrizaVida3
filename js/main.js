@@ -1,0 +1,1 @@
+// main.js (vazio temporariamente para restaurar a navegação)

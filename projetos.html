@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cicatriza Vida - Projetos</title>
+  <link rel="stylesheet" href="css/styles.min.css">
+</head>
+<body class="site">
+<header class="site-header">
+  <div class="container navbar" id="navbar">
+    <div class="navbar-brand">
+      <a href="index.html" class="flex">
+        <img src="images/logo.png" alt="Cicatriza Vida logo">
+        <strong>Cicatriza Vida</strong>
+      </a>
+    </div>
+    <button class="nav-toggle btn ghost" id="btnMenu">☰ Menu</button>
+    <nav class="navbar-menu">
+      <a href="index.html">Início</a>
+      <a href="projetos.html" aria-current="page">Projetos</a>
+      <a href="cadastro.html">Doação</a>
+      <a href="inscricao.html">Inscrição</a>
+      <a href="voluntario.html">Voluntariado</a>
+      <a href="painel.html">Painel da ONG</a>
+      <a href="styleguide.html">Guia de Estilo</a>
+      <button class="btn ghost" id="toggleTheme">🌙 Tema</button>
+    </nav>
+  </div>
+</header>
+
+<main class="site-main container">
+  <h1 class="mb-2">Projetos Sociais</h1>
+
+  <div class="cards">
+    <article class="card">
+      <img src="images/doacoes-itens.jpg" alt="Kits com curativos e coberturas para doação">
+      <div class="card-body">
+        <h2>Doação de Curativos Avançados</h2>
+        <p>Recolhemos e distribuímos curativos e coberturas para pacientes com pé diabético e lesões por pressão, priorizando a equidade no acesso ao cuidado.</p>
+        <div class="flex">
+          <span class="badge info">Doações</span>
+          <span class="badge success">Ativo</span>
+        </div>
+      </div>
+      <div class="card-footer">
+        <a href="cadastro.html" class="btn">Fazer Doação</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="images/projetos-oficina-workshop.jpg" alt="Oficina prática com profissionais e cuidadores">
+      <div class="card-body">
+        <h2>Apoio Educacional e Capacitação</h2>
+        <p>Oficinas práticas voltadas a cuidadores e profissionais de saúde, abordando técnicas de curativos e prevenção de lesões complexas.</p>
+        <div class="flex">
+          <span class="badge info">Capacitação</span>
+          <span class="badge success">Ativo</span>
+        </div>
+      </div>
+      <div class="card-footer">
+        <a href="inscricao.html" class="btn">Inscreva-se</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="images/projetos-familia-entrega.jpg" alt="Entrega de curativos e coberturas a pacientes e famílias">
+      <div class="card-body">
+        <h2>Entrega Comunitária</h2>
+        <p>Voluntários e profissionais realizam entregas presenciais de kits de curativos, reforçando o compromisso social da ONG.</p>
+        <div class="flex">
+          <span class="badge info">Assistência</span>
+          <span class="badge success">Ativo</span>
+        </div>
+      </div>
+      <div class="card-footer">
+        <a href="voluntario.html" class="btn">Quero participar</a>
+      </div>
+    </article>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">© 2025 CicatrizaVida | Tefé - Amazonas | Todos os direitos reservados — Nandria da Silva Brizido</div>
+</footer>
+
+<script src="js/script.js"></script>
+<div id="chatWidget" class="chat-widget">
+  <button id="chatToggle" class="chat-btn" aria-label="Abrir chat">💬</button>
+  <div id="chatBox" class="chat-box hidden">
+    <div class="chat-header">
+      <h4>Fale Conosco</h4>
+      <button id="chatClose" class="close-btn">✖</button>
+    </div>
+    <div id="chatMessages" class="chat-messages"></div>
+    <div class="chat-input">
+      <input type="text" id="chatInput" placeholder="Digite sua mensagem..." />
+      <button id="chatSend">Enviar</button>
+    </div>
+  </div>
+</div>
+<script src="js/chat.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cicatriza Vida - Voluntariado</title>
+  <link rel="stylesheet" href="css/styles.min.css">
+</head>
+<body class="site">
+<header class="site-header">
+  <div class="container navbar" id="navbar">
+    <div class="navbar-brand">
+      <a href="index.html" class="flex">
+        <img src="images/logo.png" alt="Cicatriza Vida logo">
+        <strong>Cicatriza Vida</strong>
+      </a>
+    </div>
+    <button class="nav-toggle btn ghost" id="btnMenu">☰ Menu</button>
+    <nav class="navbar-menu">
+      <a href="index.html">Início</a>
+      <a href="projetos.html">Projetos</a>
+      <a href="cadastro.html">Doação</a>
+      <a href="inscricao.html">Inscrição</a>
+      <a href="voluntario.html" aria-current="page">Voluntariado</a>
+      <a href="painel.html">Painel da ONG</a>
+      <a href="styleguide.html">Guia de Estilo</a>
+      <button class="btn ghost" id="toggleTheme">🌙 Tema</button>
+    </nav>
+  </div>
+</header>
+
+<main class="site-main container">
+  <h1 class="mb-2">Cadastro de Voluntariado</h1>
+  <p>Participe da Cicatriza Vida como voluntário(a). Preencha seus dados e selecione as áreas em que gostaria de ajudar.</p>
+
+  <form id="voluntarioForm" class="form">
+    <div class="form-row">
+      <div class="form-group half">
+        <label for="nome">Nome Completo:</label>
+        <input type="text" id="nome" name="nome" required>
+      </div>
+
+      <div class="form-group half">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group half">
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" name="cpf" maxlength="14" required placeholder="000.000.000-00">
+      </div>
+
+      <div class="form-group half">
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" maxlength="15" required placeholder="(00) 00000-0000">
+      </div>
+
+      <div class="form-group half">
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade" name="cidade" required>
+      </div>
+
+      <div class="form-group half">
+        <label for="estado">Estado:</label>
+        <input type="text" id="estado" name="estado" maxlength="2" required placeholder="UF">
+      </div>
+
+      <div class="form-group col-12">
+        <label>Disponibilidade:</label>
+        <div class="flex">
+          <label><input type="checkbox" name="dias" value="segunda"> Segunda</label>
+          <label><input type="checkbox" name="dias" value="terca"> Terça</label>
+          <label><input type="checkbox" name="dias" value="quarta"> Quarta</label>
+          <label><input type="checkbox" name="dias" value="quinta"> Quinta</label>
+          <label><input type="checkbox" name="dias" value="sexta"> Sexta</label>
+          <label><input type="checkbox" name="dias" value="sabado"> Sábado</label>
+        </div>
+      </div>
+
+      <div class="form-group col-12">
+        <label>Área de Interesse:</label>
+        <div class="flex">
+          <label><input type="checkbox" name="area" value="visitas"> Visitas a pacientes</label>
+          <label><input type="checkbox" name="area" value="apoio"> Apoio técnico</label>
+          <label><input type="checkbox" name="area" value="eventos"> Eventos e campanhas</label>
+          <label><input type="checkbox" name="area" value="administrativo"> Apoio administrativo</label>
+        </div>
+      </div>
+
+      <div class="form-group col-12">
+        <label for="motivacao">Conte-nos brevemente sua motivação para ser voluntário(a):</label>
+        <textarea id="motivacao" name="motivacao" rows="4" placeholder="Escreva aqui..." required></textarea>
+      </div>
+    </div>
+
+    <button type="submit" class="btn mt-2">Enviar Cadastro</button>
+  </form>
+</main>
+
+<footer class="site-footer">
+  <div class="container">2025 CicatrizaVida | Tefé - Amazonas | Todos os direitos reservados — Nandria da Silva Brizido</div>
+</footer>
+
+<script src="js/script.js"></script>
+<script>
+  const form = document.getElementById('voluntarioForm');
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    alert('💚 Cadastro de voluntário enviado com sucesso! Entraremos em contato em breve.');
+    form.reset();
+  });
+</script>
+
+<div id="chatWidget" class="chat-widget">
+  <button id="chatToggle" class="chat-btn" aria-label="Abrir chat">💬</button>
+  <div id="chatBox" class="chat-box hidden">
+    <div class="chat-header">
+      <h4>Fale Conosco</h4>
+      <button id="chatClose" class="close-btn">✖</button>
+    </div>
+    <div id="chatMessages" class="chat-messages"></div>
+    <div class="chat-input">
+      <input type="text" id="chatInput" placeholder="Digite sua mensagem..." />
+      <button id="chatSend">Enviar</button>
+    </div>
+  </div>
+</div>
+<script src="js/chat.js"></script>
+
+</body>
+</html>
